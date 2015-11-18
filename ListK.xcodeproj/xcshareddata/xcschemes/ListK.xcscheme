@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6533EB91BF77D8B0078FC1A"
-               BuildableName = "Listsw.framework"
-               BlueprintName = "Listsw"
-               ReferencedContainer = "container:Listsw.xcodeproj">
+               BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+               BuildableName = "ListK.framework"
+               BlueprintName = "ListK"
+               ReferencedContainer = "container:ListK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6533EC31BF77D8B0078FC1A"
-               BuildableName = "ListswTests.xctest"
-               BlueprintName = "ListswTests"
-               ReferencedContainer = "container:Listsw.xcodeproj">
+               BlueprintIdentifier = "D6E824FB1BFC01A60025BCF8"
+               BuildableName = "ListKTests.xctest"
+               BlueprintName = "ListKTests"
+               ReferencedContainer = "container:ListK.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6533EB91BF77D8B0078FC1A"
-            BuildableName = "Listsw.framework"
-            BlueprintName = "Listsw"
-            ReferencedContainer = "container:Listsw.xcodeproj">
+            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BuildableName = "ListK.framework"
+            BlueprintName = "ListK"
+            ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6533EB91BF77D8B0078FC1A"
-            BuildableName = "Listsw.framework"
-            BlueprintName = "Listsw"
-            ReferencedContainer = "container:Listsw.xcodeproj">
+            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BuildableName = "ListK.framework"
+            BlueprintName = "ListK"
+            ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,10 +82,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6533EB91BF77D8B0078FC1A"
-            BuildableName = "Listsw.framework"
-            BlueprintName = "Listsw"
-            ReferencedContainer = "container:Listsw.xcodeproj">
+            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BuildableName = "ListK.framework"
+            BlueprintName = "ListK"
+            ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

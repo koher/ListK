@@ -1,7 +1,7 @@
-Listsw
+ListK
 ================
 
-_Listsw_ provides lazy lists like ones in functional programming for Swift.
+_ListK_ provides lazy lists like ones in functional programming for Swift.
 
 ```swift
 let xs: List<Int> = [2, 3, 5, 7, 11]
@@ -56,7 +56,7 @@ sum []     = 0
 sum (x:xs) = x + sum xs
 ```
 
-`List` of _Listsw_ can be matched `head` and `tail` because it is declared as `enum`.
+`List` of _ListK_ can be matched `head` and `tail` because it is declared as `enum`.
 
 ```swift
 enum List<Element> {
@@ -107,7 +107,7 @@ Installation
 
 ```
 # Cartfile
-github "koher/Listsw" ~> 0.1
+github "koher/ListK" ~> 0.1
 ```
 
 License

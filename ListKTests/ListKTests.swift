@@ -1,7 +1,7 @@
 import XCTest
-@testable import Listsw
+@testable import ListK
 
-class ListswTests: XCTestCase {
+class ListKTests: XCTestCase {
     func testInit() {
         let rs: List<Int> = List()
         
@@ -211,14 +211,14 @@ class ListswTests: XCTestCase {
             
             XCTAssert(rs == [3, 5, 7])
         }
-
+        
         if true {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[1..<3]
             
             XCTAssert(rs == [3, 5])
         }
-
+        
         if true {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[0..<0]
@@ -232,14 +232,14 @@ class ListswTests: XCTestCase {
             
             XCTAssert(rs == [])
         }
-
+        
         if true {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[2...999]
             
             XCTAssert(rs == [5, 7, 11])
         }
-
+        
         if true { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs[5...9]
@@ -368,7 +368,7 @@ class ListswTests: XCTestCase {
             xs.forEach {
                 r += $0
             }
-
+            
             XCTAssertEqual(r, 28)
         }
     }
@@ -419,7 +419,7 @@ class ListswTests: XCTestCase {
             
             XCTAssert(rs == [2, 3, 5, 7])
         }
-
+        
         if true { // Infinite list
             let xss: List<List<Int>> = List { [$0] }
             let rs: List<Int> = xss.flatMap { $0 }
@@ -427,7 +427,7 @@ class ListswTests: XCTestCase {
             XCTAssert(rs.take(5) == [0, 1, 2, 3, 4])
         }
     }
-
+    
     func testApply() {
         if true {
             let xs: List<Int> = [2, 3]
@@ -488,11 +488,11 @@ class ListswTests: XCTestCase {
             
             XCTAssert(rs == [])
         }
-
+        
         if true { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.take(5)
-
+            
             XCTAssert(rs == [0, 1, 2, 3, 4])
         }
     }
@@ -584,7 +584,7 @@ class ListswTests: XCTestCase {
         if true {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.reverse
-
+            
             XCTAssert(rs == [11, 7, 5, 3, 2])
         }
     }
@@ -658,7 +658,7 @@ class ListswTests: XCTestCase {
             XCTAssert(g.next()! == (5, "five"))
             XCTAssertNil(g.next())
         }
-
+        
         if true {
             let xs: List<Int> = [2, 3, 5]
             let ys: List<String> = []
@@ -668,7 +668,7 @@ class ListswTests: XCTestCase {
             
             XCTAssertNil(g.next())
         }
-
+        
         if true {
             let xs: List<Int> = []
             let ys: List<String> = ["two", "three", "five"]
@@ -833,7 +833,7 @@ class ListswTests: XCTestCase {
             XCTAssert(rs.take(5) == [0, 1, 2, 3, 4])
         }
     }
-
+    
     func testFlippedFlatMapOperator() {
         if true {
             let xss: List<List<Int>> = [[2], [3, 5], [7, 11, 13]]
@@ -856,7 +856,7 @@ class ListswTests: XCTestCase {
             XCTAssert(rs.take(5) == [0, 1, 2, 3, 4])
         }
     }
-
+    
     func testFlippedApplyOperator() {
         if true {
             let xs: List<Int> = [2]
@@ -966,7 +966,7 @@ class ListswTests: XCTestCase {
             
             XCTAssertTrue(r)
         }
-
+        
         if true {
             let xs: List<Bool> = [true, true, false, true, true]
             let r: Bool = xs.and
@@ -988,7 +988,7 @@ class ListswTests: XCTestCase {
             XCTAssertFalse(r)
         }
     }
- 
+    
     func testOr() {
         if true {
             let xs: List<Bool> = [false, false, false, false, false]
@@ -1018,7 +1018,7 @@ class ListswTests: XCTestCase {
             XCTAssertTrue(r)
         }
     }
-
+    
     func testReducePerformance() { // slow
         let xs: List<Int> = List { $0 }.take(256)
         let ys: List<Int> = xs.map { $0 * $0 }
@@ -1070,7 +1070,7 @@ class ListswTests: XCTestCase {
         // Operators compatible with thoughtbot/Runes
         let ys: List<Int> = infinite >>- { $0 % 2 == 0 ? [$0] : [] } // [0, 2, 4, 6, 8, ...]
         let zs: List<Int> = curry(*) <^> [2, 3] <*> [5, 7]           // [10, 14, 15, 21]
-
+        
         // Fibonacci
         func fibonacci() -> List<Int> {
             return [0, 1] + zip(fibonacci(), fibonacci().tail).map(+)
@@ -1078,7 +1078,7 @@ class ListswTests: XCTestCase {
         
         // Nested reduceRight with lazy evaluation
         let xss: List<List<Int>> = List { List(repeatedValue: $0, count: $0) }
-            // [[1], [2, 2], [3, 3, 3], [4, 4, 4, 4], ...]
+        // [[1], [2, 2], [3, 3, 3], [4, 4, 4, 4], ...]
         let flattened: List<Int> = xss.reduceRight(List<Int>()) { xs, flattened in
             xs.reduceRight(flattened()) { x, flattened in
                 List(head: x, tail: flattened())
