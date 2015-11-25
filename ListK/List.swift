@@ -45,7 +45,7 @@ extension List: ArrayLiteralConvertible {
         switch generator.next() {
         case .None:
             self.init()
-        case .Some(let value):
+        case let .Some(value):
             self.init(head: value, tail: List(generator: generator))
         }
     }
@@ -89,7 +89,7 @@ extension List { // head and tail
         switch self {
         case .None:
             return nil
-        case .Some(let head, _):
+        case let .Some(head, _):
             return head
         }
     }
@@ -98,7 +98,7 @@ extension List { // head and tail
         switch self {
         case .None:
             return self
-        case .Some(_, let tail):
+        case let .Some(_, tail):
             return tail()
         }
     }
@@ -161,7 +161,7 @@ extension List { // basic higher-order functions
         switch self {
         case .None:
             return initial
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             return tail().reduce(combine(initial, head), combine: combine)
         }
     }
@@ -170,7 +170,7 @@ extension List { // basic higher-order functions
         switch self {
         case .None:
             return initial()
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             return combine(head, { tail().reduceRight(initial, combine: combine) })
         }
     }
@@ -179,7 +179,7 @@ extension List { // basic higher-order functions
         switch self {
         case .None:
             return
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             body(head)
             tail().forEach(body)
         }
@@ -205,22 +205,22 @@ extension List { // basic higher-order functions
 extension List { // take, drop
     public func take(numberOfElements: Int) -> List<Element> {
         switch (numberOfElements, self) {
-        case (let n, _) where n <= 0:
+        case let (n, _) where n <= 0:
             return List()
         case (_, .None):
             return List()
-        case (let n, .Some(let head, let tail)):
+        case let (n, .Some(head, tail)):
             return List(head: head, tail: tail().take(n - 1))
         }
     }
     
     public func drop(numberOfElements: Int) -> List<Element> {
         switch (numberOfElements, self) {
-        case (let n, _) where n <= 0:
+        case let (n, _) where n <= 0:
             return self
         case (_, .None):
             return List()
-        case (let n, .Some(_, let tail)):
+        case let (n, .Some(_, tail)):
             return tail().drop(n - 1)
         }
     }
@@ -229,7 +229,7 @@ extension List { // take, drop
         switch self {
         case .None:
             return List()
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             return includeElement(head) ? List(head: head, tail: tail().takeWhile(includeElement)) : List()
         }
     }
@@ -238,7 +238,7 @@ extension List { // take, drop
         switch self {
         case .None:
             return List()
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             return excludeElement(head) ? tail().dropWhile(excludeElement) : self
         }
     }
@@ -264,7 +264,7 @@ extension List: CustomStringConvertible {
         switch self {
         case .None:
             return "[]"
-        case .Some(let head, let tail):
+        case let .Some(head, tail):
             return "[\(head)" + tail().reduce("") { $0 + ", \($1)" } + "]"
         }
     }
@@ -272,7 +272,7 @@ extension List: CustomStringConvertible {
 
 public func zip<T, U>(list1: List<T>, _ list2: List<U>) -> List<(T, U)> {
     switch (list1, list2) {
-    case (.Some(let head1, let tail1), .Some(let head2, let tail2)):
+    case let (.Some(head1, tail1), .Some(head2, tail2)):
         return List(head: (head1, head2), tail: zip(tail1(), tail2()))
     case (_, _):
         return List()
@@ -283,7 +283,7 @@ public func ==<Element: Equatable>(lhs: List<Element>, rhs: List<Element>) -> Bo
     switch (lhs, rhs) {
     case (.None, .None):
         return true
-    case (.Some(let head1, let tail1), .Some(let head2, let tail2)):
+    case let (.Some(head1, tail1), .Some(head2, tail2)):
         return head1 == head2 && tail1() == tail2()
     case (_, _):
         return false

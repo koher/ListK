@@ -1147,6 +1147,6 @@ private func fibonacci() -> List<Int> {
 private func sum(xs: List<Int>) -> Int {
     switch xs {
     case .None: return 0
-    case.Some(let head, let tail): return head + sum(tail())
+    case let .Some(head, tail): return head + sum(tail())
     }
 }
