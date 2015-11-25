@@ -60,6 +60,15 @@ extension List { // Initializers with higher-order functions
         self = List(head: initial, tail: List(initial: next(initial), next: next))
     }
     
+    public init(initial: List<Element>, next: List<Element> -> Element) {
+        switch initial {
+        case .None:
+            self = List(repeatedValue: next(initial))
+        case let .Some(head, tail):
+            self = List(head: head, tail: List(initial: tail() + [next(initial)], next: next))
+        }
+    }
+    
     public init(transform: Int -> Element) {
         self = List<Int>(initial: 0, next: { $0 + 1 }).map(transform)
     }
@@ -322,6 +331,16 @@ extension List where Element: BooleanType {
     
     public var or: Bool {
         return reduceRight(false) { x, or in x || or() }
+    }
+}
+
+extension List where Element: Comparable {
+    public var min: Element? {
+        return reduce(nil) { min, x in min.map { x < $0 ? x : $0 } ?? x }
+    }
+    
+    public var max: Element? {
+        return reduce(nil) { max, x in max.map { x > $0 ? x : $0 } ?? x }
     }
 }
 

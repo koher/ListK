@@ -24,7 +24,7 @@ let zs: List<Int> = curry(*) <^> [2, 3] <*> [5, 7]           // [10, 14, 15, 21]
 
 // Fibonacci
 func fibonacci() -> List<Int> {
-    return [0, 1] + zip(fibonacci(), fibonacci().tail).map(+)
+    return List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
 } // returns [0, 1, 1, 2, 3, 5, 8, 13, ...]
 ```
 

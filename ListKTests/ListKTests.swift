@@ -94,6 +94,12 @@ class ListKTests: XCTestCase {
         XCTAssert(rs.take(5) == [0, 1, 2, 3, 4])
     }
     
+    func testInitRecurrenceN() {
+        let rs: List<Int> = List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
+        
+        XCTAssert(rs.take(8) == [0, 1, 1, 2, 3, 5, 8, 13])
+    }
+    
     func testInitRepeat() {
         let rs: List<Int> = List(repeatedValue: 2)
         
@@ -1019,6 +1025,38 @@ class ListKTests: XCTestCase {
         }
     }
     
+    func testMin() {
+        if true {
+            let xs: List<Int> = [3, 2, 7, 5, 11]
+            let r: Int? = xs.min
+            
+            XCTAssert(r! == 2)
+        }
+        
+        if true {
+            let xs: List<Int> = []
+            let r: Int? = xs.min
+            
+            XCTAssertNil(r)
+        }
+    }
+    
+    func testMax() {
+        if true {
+            let xs: List<Int> = [2, 5, 3, 11, 7]
+            let r: Int? = xs.max
+            
+            XCTAssert(r! == 11)
+        }
+        
+        if true {
+            let xs: List<Int> = []
+            let r: Int? = xs.max
+            
+            XCTAssertNil(r)
+        }
+    }
+    
     func testReducePerformance() { // slow
         let xs: List<Int> = List { $0 }.take(256)
         let ys: List<Int> = xs.map { $0 * $0 }
@@ -1073,7 +1111,7 @@ class ListKTests: XCTestCase {
         
         // Fibonacci
         func fibonacci() -> List<Int> {
-            return [0, 1] + zip(fibonacci(), fibonacci().tail).map(+)
+            return List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
         } // returns [0, 1, 1, 2, 3, 5, 8, 13, ...]
         
         // Nested reduceRight with lazy evaluation
@@ -1103,7 +1141,7 @@ private func curry<T, U, V>(f: (T, U) -> V) -> T -> U -> V {
 }
 
 private func fibonacci() -> List<Int> {
-    return [0, 1] + zip(fibonacci(), fibonacci().tail).map(+)
+    return List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
 }
 
 private func sum(xs: List<Int>) -> Int {
