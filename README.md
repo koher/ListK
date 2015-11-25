@@ -107,7 +107,7 @@ Installation
 
 ```
 # Cartfile
-github "koher/ListK" ~> 0.1
+github "koher/ListK" ~> 0.2
 ```
 
 License
