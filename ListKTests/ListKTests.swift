@@ -1111,7 +1111,7 @@ class ListKTests: XCTestCase {
         
         // Fibonacci
         func fibonacci() -> List<Int> {
-            return List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
+            return List(initial: [0, 1], next: sum)
         } // returns [0, 1, 1, 2, 3, 5, 8, 13, ...]
         
         // Nested reduceRight with lazy evaluation
@@ -1141,7 +1141,7 @@ private func curry<T, U, V>(f: (T, U) -> V) -> T -> U -> V {
 }
 
 private func fibonacci() -> List<Int> {
-    return List(initial: [0, 1]) { $0.reduce(0) { $0 + $1 } }
+    return List(initial: [0, 1], next: sum)
 }
 
 private func sum(xs: List<Int>) -> Int {
