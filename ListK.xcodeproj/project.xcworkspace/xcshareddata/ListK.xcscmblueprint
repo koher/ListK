@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "32EFF1D4F978647C4F9CFD569FB01D67A8B7690E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0A5C3A6DB1EA9211CEFA5384E9882B4D710699A4" : 0,
+    "32EFF1D4F978647C4F9CFD569FB01D67A8B7690E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47DDB3FC-2119-43D6-B714-673F44D5EBE6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0A5C3A6DB1EA9211CEFA5384E9882B4D710699A4" : "ListK\/Carthage\/Checkouts\/Runes\/",
+    "32EFF1D4F978647C4F9CFD569FB01D67A8B7690E" : "ListK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ListK",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ListK.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/thoughtbot\/Runes.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0A5C3A6DB1EA9211CEFA5384E9882B4D710699A4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:koher\/Listsw.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32EFF1D4F978647C4F9CFD569FB01D67A8B7690E"
+    }
+  ]
+}

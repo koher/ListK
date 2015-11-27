@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6553BFB1C07E38100A85392 /* Runes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6553BFA1C07E38100A85392 /* Runes.swift */; };
 		D6E824F61BFC01A60025BCF8 /* ListK.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E824F51BFC01A60025BCF8 /* ListK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6E824FD1BFC01A60025BCF8 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E824F21BFC01A60025BCF8 /* ListK.framework */; };
 		D6E825021BFC01A60025BCF8 /* ListKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E825011BFC01A60025BCF8 /* ListKTests.swift */; };
 		D6E8250E1BFC02470025BCF8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250C1BFC02470025BCF8 /* List.swift */; };
-		D6E8250F1BFC02470025BCF8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250D1BFC02470025BCF8 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6553BFA1C07E38100A85392 /* Runes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Runes.swift; path = Carthage/Checkouts/Runes/Source/Runes.swift; sourceTree = SOURCE_ROOT; };
 		D6E824F21BFC01A60025BCF8 /* ListK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6E824F51BFC01A60025BCF8 /* ListK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListK.h; sourceTree = "<group>"; };
 		D6E824F71BFC01A60025BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,7 +33,6 @@
 		D6E825011BFC01A60025BCF8 /* ListKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKTests.swift; sourceTree = "<group>"; };
 		D6E825031BFC01A60025BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E8250C1BFC02470025BCF8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		D6E8250D1BFC02470025BCF8 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				D6E824F51BFC01A60025BCF8 /* ListK.h */,
 				D6E824F71BFC01A60025BCF8 /* Info.plist */,
 				D6E8250C1BFC02470025BCF8 /* List.swift */,
-				D6E8250D1BFC02470025BCF8 /* Operators.swift */,
+				D6553BFA1C07E38100A85392 /* Runes.swift */,
 			);
 			path = ListK;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E8250E1BFC02470025BCF8 /* List.swift in Sources */,
-				D6E8250F1BFC02470025BCF8 /* Operators.swift in Sources */,
+				D6553BFB1C07E38100A85392 /* Runes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
