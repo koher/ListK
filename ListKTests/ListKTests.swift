@@ -1025,33 +1025,33 @@ class ListKTests: XCTestCase {
         }
     }
     
-    func testMin() {
+    func testMinElement() {
         if true {
             let xs: List<Int> = [3, 2, 7, 5, 11]
-            let r: Int? = xs.min
+            let r: Int? = xs.minElement()
             
             XCTAssert(r! == 2)
         }
         
         if true {
             let xs: List<Int> = []
-            let r: Int? = xs.min
+            let r: Int? = xs.minElement()
             
             XCTAssertNil(r)
         }
     }
     
-    func testMax() {
+    func testMaxElement() {
         if true {
             let xs: List<Int> = [2, 5, 3, 11, 7]
-            let r: Int? = xs.max
+            let r: Int? = xs.maxElement()
             
             XCTAssert(r! == 11)
         }
         
         if true {
             let xs: List<Int> = []
-            let r: Int? = xs.max
+            let r: Int? = xs.maxElement()
             
             XCTAssertNil(r)
         }

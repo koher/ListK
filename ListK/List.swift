@@ -335,11 +335,11 @@ extension List where Element: BooleanType {
 }
 
 extension List where Element: Comparable {
-    public var min: Element? {
+    public func minElement() -> Element? {
         return reduce(nil) { min, x in min.map { x < $0 ? x : $0 } ?? x }
     }
     
-    public var max: Element? {
+    public func maxElement() -> Element? {
         return reduce(nil) { max, x in max.map { x > $0 ? x : $0 } ?? x }
     }
 }
