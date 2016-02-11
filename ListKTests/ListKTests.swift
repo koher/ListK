@@ -15,13 +15,13 @@ class ListKTests: XCTestCase {
     }
     
     func testInitWithHeadAndTail() {
-        if true {
+        do {
             let rs: List<Int> = List(head: 2, tail: [3, 5, 7, 11])
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let rs: List<Int> = List(head: 0, tail: List { $0 + 1 })
             
             XCTAssert(rs.take(5) == [0, 1, 2, 3, 4])
@@ -29,13 +29,13 @@ class ListKTests: XCTestCase {
     }
     
     func testInitWithArrayLiteral() {
-        if true {
+        do {
             let rs: List<Int> = [2, 3, 5, 7, 11]
             
             XCTAssert(rs == List(head: 2, tail: List(head:3, tail: List(head: 5, tail: List(head: 7, tail: List(11))))))
         }
         
-        if true {
+        do {
             let rs: List<Int> = []
             
             XCTAssert(rs == List())
@@ -57,14 +57,14 @@ class ListKTests: XCTestCase {
     }
     
     func testInitWithSequence() {
-        if true {
+        do {
             let xs: [Int] = [2, 3, 5, 7, 11]
             let rs: List<Int> = List(sequence: xs)
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = List(sequence: xs)
             
@@ -73,14 +73,14 @@ class ListKTests: XCTestCase {
     }
     
     func testInitWithGenerator() {
-        if true {
+        do {
             let xs: [Int] = [2, 3, 5, 7, 11]
             let rs: List<Int> = List(generator: xs.generate())
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = List(sequence: xs.generate())
             
@@ -113,21 +113,21 @@ class ListKTests: XCTestCase {
     }
     
     func testHead() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Int? = xs.head
             
             XCTAssertEqual(r!, 2)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int? = xs.head
             
             XCTAssertNil(r)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let r: Int? = xs.head
             
@@ -136,21 +136,21 @@ class ListKTests: XCTestCase {
     }
     
     func testTail() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.tail
             
             XCTAssert(rs == [3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let rs: List<Int> = xs.tail
             
             XCTAssert(rs == [])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.tail
             
@@ -159,7 +159,7 @@ class ListKTests: XCTestCase {
     }
     
     func testGenerate() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r = xs.generate()
             
@@ -171,7 +171,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(r.next())
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let r = xs.generate()
             
@@ -184,7 +184,7 @@ class ListKTests: XCTestCase {
     }
     
     func testSubscript() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             
             XCTAssertEqual(xs[0], 2)
@@ -197,7 +197,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(xs[5])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             
             XCTAssertEqual(xs[0], 0)
@@ -211,42 +211,42 @@ class ListKTests: XCTestCase {
     }
     
     func testSubscriptRange() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[1...3]
             
             XCTAssert(rs == [3, 5, 7])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[1..<3]
             
             XCTAssert(rs == [3, 5])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[0..<0]
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[-10..<0]
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs[2...999]
             
             XCTAssert(rs == [5, 7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs[5...9]
             
@@ -255,14 +255,14 @@ class ListKTests: XCTestCase {
     }
     
     func testCount() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Int = xs.count
             
             XCTAssertEqual(r, 5)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int = xs.count
             
@@ -271,21 +271,21 @@ class ListKTests: XCTestCase {
     }
     
     func testIsEmpty() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Bool = xs.isEmpty
             
             XCTAssertFalse(r)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Bool = xs.isEmpty
             
             XCTAssertTrue(r)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let r: Bool = xs.isEmpty
             
@@ -294,21 +294,21 @@ class ListKTests: XCTestCase {
     }
     
     func testFirst() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Int? = xs.first
             
             XCTAssertEqual(r!, 2)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int? = xs.first
             
             XCTAssertNil(r)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let r: Int? = xs.first
             
@@ -317,14 +317,14 @@ class ListKTests: XCTestCase {
     }
     
     func testLast() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Int? = xs.last
             
             XCTAssertEqual(r!, 11)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int? = xs.last
             
@@ -340,21 +340,21 @@ class ListKTests: XCTestCase {
     }
     
     func testLazyReduceRight() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r: Int = xs.reduceRight(0) { $0 + $1() }
             
             XCTAssertEqual(r, 28)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Bool> = List { _ in false }
             let r: Bool = xs.reduceRight(true) { $0 && $1() }
             
             XCTAssertFalse(r)
         }
         
-        if true { // Lazily nested
+        do { // Lazily nested
             let xss: List<List<Int>> = List { List(repeatedValue: $0, count: $0) }
             let rs: List<Int> = xss.reduceRight(List<Int>()) { xs, flattened in
                 xs.reduceRight(flattened()) { x, flattened in
@@ -367,7 +367,7 @@ class ListKTests: XCTestCase {
     }
     
     func testForEach() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             var r: Int = 0
             
@@ -380,14 +380,14 @@ class ListKTests: XCTestCase {
     }
     
     func testFilter() {
-        if true {
+        do {
             let xs: List<Int> = [0, 1, 2, 3, 4]
             let rs: List<Int> = xs.filter { $0 % 2 == 0 }
             
             XCTAssert(rs == [0, 2, 4])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.filter { $0 % 2 == 0 }
             
@@ -396,14 +396,14 @@ class ListKTests: XCTestCase {
     }
     
     func testMap() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.map { $0 * $0 }
             
             XCTAssert(rs == [4, 9, 25, 49, 121])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.map { $0 * $0 }
             
@@ -412,21 +412,21 @@ class ListKTests: XCTestCase {
     }
     
     func testFlatMap() {
-        if true {
+        do {
             let xss: List<List<Int>> = [[2], [3, 5], [7, 11, 13]]
             let rs: List<Int> = xss.flatMap { $0 }
             
             XCTAssert(rs == [2, 3, 5, 7, 11, 13])
         }
         
-        if true {
+        do {
             let xs: List<String> = ["one", "2", "3", "four", "5", "six", "7"]
             let rs: List<Int> = xs.flatMap { Int($0).map { [$0] } ?? [] }
             
             XCTAssert(rs == [2, 3, 5, 7])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xss: List<List<Int>> = List { [$0] }
             let rs: List<Int> = xss.flatMap { $0 }
             
@@ -435,7 +435,7 @@ class ListKTests: XCTestCase {
     }
     
     func testApply() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3]
             let ys: List<Int> = [5, 7, 11]
             let rs: List<Int> = ys.apply(xs.apply(pure(curry(+))))
@@ -443,7 +443,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [7, 9, 13, 8, 10, 14])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 + 1 }
             let ys: List<Int> = [2, 3, 5]
             let rs: List<Int> = ys.apply(xs.apply(pure(curry(*))))
@@ -453,49 +453,49 @@ class ListKTests: XCTestCase {
     }
     
     func testTake() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.take(3)
             
             XCTAssert(rs == [2, 3, 5])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.take(0)
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.take(-1)
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.take(5)
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.take(6)
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let rs: List<Int> = xs.take(1)
             
             XCTAssert(rs == [])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.take(5)
             
@@ -504,49 +504,49 @@ class ListKTests: XCTestCase {
     }
     
     func testDrop() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.drop(3)
             
             XCTAssert(rs == [7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.drop(0)
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.drop(-1)
             
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.drop(5)
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.drop(6)
             
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let rs: List<Int> = xs.drop(1)
             
             XCTAssert(rs == [])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.drop(5)
             
@@ -555,14 +555,14 @@ class ListKTests: XCTestCase {
     }
     
     func testTakeWhile() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.takeWhile { $0 < 7 }
             
             XCTAssert(rs == [2, 3, 5])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.takeWhile { $0 < 5 }
             
@@ -571,14 +571,14 @@ class ListKTests: XCTestCase {
     }
     
     func testDropWhile() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.dropWhile { $0 < 7 }
             
             XCTAssert(rs == [7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.dropWhile { $0 < 5 }
             
@@ -587,7 +587,7 @@ class ListKTests: XCTestCase {
     }
     
     func testReverse() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs.reverse
             
@@ -596,14 +596,14 @@ class ListKTests: XCTestCase {
     }
     
     func testCycle() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5]
             let rs: List<Int> = xs.cycle
             
             XCTAssert(rs.take(9) == [2, 3, 5, 2, 3, 5, 2, 3, 5])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let rs: List<Int> = xs.cycle
             
@@ -612,13 +612,13 @@ class ListKTests: XCTestCase {
     }
     
     func testDescription() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             
             XCTAssertEqual(xs.description, "[2, 3, 5, 7, 11]")
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             
             XCTAssertEqual(xs.description, "[]")
@@ -626,7 +626,7 @@ class ListKTests: XCTestCase {
     }
     
     func testZip() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5]
             let ys: List<String> = ["two", "three", "five"]
             let rs: List<(Int, String)> = zip(xs, ys)
@@ -639,7 +639,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let ys: List<String> = ["two", "three", "five"]
             let rs: List<(Int, String)> = zip(xs, ys)
@@ -652,7 +652,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5]
             let ys: List<String> = ["two", "three", "five", "seven", "eleven"]
             let rs: List<(Int, String)> = zip(xs, ys)
@@ -665,7 +665,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5]
             let ys: List<String> = []
             let rs: List<(Int, String)> = zip(xs, ys)
@@ -675,7 +675,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<String> = ["two", "three", "five"]
             let rs: List<(Int, String)> = zip(xs, ys)
@@ -685,7 +685,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true { // Infinite list (Both)
+        do { // Infinite list (Both)
             let xs: List<Int> = List { $0 }
             let ys: List<Int> = xs.map { $0 * $0 }
             let rs: List<(Int, Int)> = zip(xs, ys)
@@ -701,7 +701,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true { // Infinite list (xs)
+        do { // Infinite list (xs)
             let xs: List<Int> = [2, 3, 5]
             let ys: List<Int> = List { $0 }
             let rs: List<(Int, Int)> = zip(xs, ys)
@@ -715,7 +715,7 @@ class ListKTests: XCTestCase {
             XCTAssertNil(g.next())
         }
         
-        if true { // Infinite list (ys)
+        do { // Infinite list (ys)
             let xs: List<Int> = List { $0 }
             let ys: List<Int> = [2, 3, 5]
             let rs: List<(Int, Int)> = zip(xs, ys)
@@ -731,7 +731,7 @@ class ListKTests: XCTestCase {
     }
     
     func testEqualOperator() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let ys: List<Int> = [2, 3, 5, 7, 11]
             let zs: List<Int> = [2, 3, 5]
@@ -743,7 +743,7 @@ class ListKTests: XCTestCase {
             XCTAssertFalse(zs == xs)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = []
             let zs: List<Int> = [2]
@@ -757,7 +757,7 @@ class ListKTests: XCTestCase {
     }
     
     func testNotEqualOperator() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let ys: List<Int> = [2, 3, 5, 7, 11]
             let zs: List<Int> = [2, 3, 5]
@@ -769,7 +769,7 @@ class ListKTests: XCTestCase {
             XCTAssertTrue(zs != xs)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = []
             let zs: List<Int> = [2]
@@ -783,7 +783,7 @@ class ListKTests: XCTestCase {
     }
     
     func testAddOperatior() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5]
             let ys: List<Int> = [7, 11]
             let rs: List<Int> = xs + ys
@@ -791,7 +791,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = [2, 3, 5, 7, 11]
             let rs: List<Int> = xs + ys
@@ -799,7 +799,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let ys: List<Int> = []
             let rs: List<Int> = xs + ys
@@ -807,7 +807,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [2, 3, 5, 7, 11])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = [0, 1, 2]
             let ys: List<Int> = List { $0 + 3 }
             let rs: List<Int> = xs + ys
@@ -818,21 +818,21 @@ class ListKTests: XCTestCase {
     }
     
     func testFlatMapOperator() {
-        if true {
+        do {
             let xss: List<List<Int>> = [[2], [3, 5], [7, 11, 13]]
             let rs: List<Int> = xss >>- { $0 }
             
             XCTAssert(rs == [2, 3, 5, 7, 11, 13])
         }
         
-        if true {
+        do {
             let xs: List<String> = ["one", "2", "3", "four", "5", "six", "7"]
             let rs: List<Int> = xs >>- { Int($0).map { [$0] } ?? [] }
             
             XCTAssert(rs == [2, 3, 5, 7])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xss: List<List<Int>> = List { [$0] }
             let rs: List<Int> = xss >>- { $0 }
             
@@ -841,21 +841,21 @@ class ListKTests: XCTestCase {
     }
     
     func testFlippedFlatMapOperator() {
-        if true {
+        do {
             let xss: List<List<Int>> = [[2], [3, 5], [7, 11, 13]]
             let rs: List<Int> = { $0 } -<< xss
             
             XCTAssert(rs == [2, 3, 5, 7, 11, 13])
         }
         
-        if true {
+        do {
             let xs: List<String> = ["one", "2", "3", "four", "5", "six", "7"]
             let rs: List<Int> = { Int($0).map { [$0] } ?? [] } -<< xs
             
             XCTAssert(rs == [2, 3, 5, 7])
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xss: List<List<Int>> = List { [$0] }
             let rs: List<Int> = { $0 } -<< xss
             
@@ -864,7 +864,7 @@ class ListKTests: XCTestCase {
     }
     
     func testFlippedApplyOperator() {
-        if true {
+        do {
             let xs: List<Int> = [2]
             let ys: List<Int> = [3]
             let rs: List<Int> = pure(curry(+)) <*> xs <*> ys
@@ -872,7 +872,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [5])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2]
             let ys: List<Int> = []
             let rs: List<Int> = pure(curry(+)) <*> xs <*> ys
@@ -880,7 +880,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = [3]
             let rs: List<Int> = pure(curry(+)) <*> xs <*> ys
@@ -888,7 +888,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = []
             let rs: List<Int> = pure(curry(+)) <*> xs <*> ys
@@ -896,7 +896,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3]
             let ys: List<Int> = [5, 7]
             let rs: List<Int> = pure(curry(+)) <*> xs <*> ys
@@ -906,7 +906,7 @@ class ListKTests: XCTestCase {
     }
     
     func testFlippedMapOperator() {
-        if true {
+        do {
             let xs: List<Int> = [2]
             let ys: List<Int> = [3]
             let rs: List<Int> = curry(+) <^> xs <*> ys
@@ -914,7 +914,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [5])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2]
             let ys: List<Int> = []
             let rs: List<Int> = curry(+) <^> xs <*> ys
@@ -922,7 +922,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = [3]
             let rs: List<Int> = curry(+) <^> xs <*> ys
@@ -930,7 +930,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let ys: List<Int> = []
             let rs: List<Int> = curry(+) <^> xs <*> ys
@@ -938,7 +938,7 @@ class ListKTests: XCTestCase {
             XCTAssert(rs == [])
         }
         
-        if true {
+        do {
             let xs: List<Int> = [2, 3]
             let ys: List<Int> = [5, 7]
             let rs: List<Int> = curry(+) <^> xs <*> ys
@@ -948,7 +948,7 @@ class ListKTests: XCTestCase {
     }
     
     func testContains() {
-        if true {
+        do {
             let xs: List<Int> = [2, 3, 5, 7, 11]
             let r1: Bool = xs.contains(7)
             let r2: Bool = xs.contains(8)
@@ -957,7 +957,7 @@ class ListKTests: XCTestCase {
             XCTAssertFalse(r2)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Int> = List { $0 }
             let r1: Bool = xs.contains(100)
             
@@ -966,28 +966,28 @@ class ListKTests: XCTestCase {
     }
     
     func testAnd() {
-        if true {
+        do {
             let xs: List<Bool> = [true, true, true, true, true]
             let r: Bool = xs.and
             
             XCTAssertTrue(r)
         }
         
-        if true {
+        do {
             let xs: List<Bool> = [true, true, false, true, true]
             let r: Bool = xs.and
             
             XCTAssertFalse(r)
         }
         
-        if true {
+        do {
             let xs: List<Bool> = []
             let r: Bool = xs.and
             
             XCTAssertTrue(r)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Bool> = List(repeatedValue: false)
             let r: Bool = xs.and
             
@@ -996,28 +996,28 @@ class ListKTests: XCTestCase {
     }
     
     func testOr() {
-        if true {
+        do {
             let xs: List<Bool> = [false, false, false, false, false]
             let r: Bool = xs.or
             
             XCTAssertFalse(r)
         }
         
-        if true {
+        do {
             let xs: List<Bool> = [false, false, true, false, false]
             let r: Bool = xs.or
             
             XCTAssertTrue(r)
         }
         
-        if true {
+        do {
             let xs: List<Bool> = []
             let r: Bool = xs.or
             
             XCTAssertFalse(r)
         }
         
-        if true { // Infinite list
+        do { // Infinite list
             let xs: List<Bool> = List(repeatedValue: true)
             let r: Bool = xs.or
             
@@ -1026,14 +1026,14 @@ class ListKTests: XCTestCase {
     }
     
     func testMinElement() {
-        if true {
+        do {
             let xs: List<Int> = [3, 2, 7, 5, 11]
             let r: Int? = xs.minElement()
             
             XCTAssert(r! == 2)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int? = xs.minElement()
             
@@ -1042,14 +1042,14 @@ class ListKTests: XCTestCase {
     }
     
     func testMaxElement() {
-        if true {
+        do {
             let xs: List<Int> = [2, 5, 3, 11, 7]
             let r: Int? = xs.maxElement()
             
             XCTAssert(r! == 11)
         }
         
-        if true {
+        do {
             let xs: List<Int> = []
             let r: Int? = xs.maxElement()
             
