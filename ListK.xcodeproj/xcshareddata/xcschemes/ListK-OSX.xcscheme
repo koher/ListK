@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+               BlueprintIdentifier = "D6EEC4D81C6C486E0071A1B4"
                BuildableName = "ListK.framework"
-               BlueprintName = "ListK"
+               BlueprintName = "ListK-OSX"
                ReferencedContainer = "container:ListK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D6E824FB1BFC01A60025BCF8"
+               BlueprintIdentifier = "D6EEC4E11C6C486E0071A1B4"
                BuildableName = "ListKTests.xctest"
-               BlueprintName = "ListKTests"
+               BlueprintName = "ListK-OSX Tests"
                ReferencedContainer = "container:ListK.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BlueprintIdentifier = "D6EEC4D81C6C486E0071A1B4"
             BuildableName = "ListK.framework"
-            BlueprintName = "ListK"
+            BlueprintName = "ListK-OSX"
             ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BlueprintIdentifier = "D6EEC4D81C6C486E0071A1B4"
             BuildableName = "ListK.framework"
-            BlueprintName = "ListK"
+            BlueprintName = "ListK-OSX"
             ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D6E824F11BFC01A60025BCF8"
+            BlueprintIdentifier = "D6EEC4D81C6C486E0071A1B4"
             BuildableName = "ListK.framework"
-            BlueprintName = "ListK"
+            BlueprintName = "ListK-OSX"
             ReferencedContainer = "container:ListK.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

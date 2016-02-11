@@ -12,6 +12,19 @@
 		D6E825021BFC01A60025BCF8 /* ListKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E825011BFC01A60025BCF8 /* ListKTests.swift */; };
 		D6E8250E1BFC02470025BCF8 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250C1BFC02470025BCF8 /* List.swift */; };
 		D6E8250F1BFC02470025BCF8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250D1BFC02470025BCF8 /* Operators.swift */; };
+		D6EEC4E31C6C486F0071A1B4 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EEC4D91C6C486E0071A1B4 /* ListK.framework */; };
+		D6EEC4F01C6C49CB0071A1B4 /* ListK.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E824F51BFC01A60025BCF8 /* ListK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6EEC4F11C6C4AA20071A1B4 /* ListKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E825011BFC01A60025BCF8 /* ListKTests.swift */; };
+		D6EEC4F21C6C4B0F0071A1B4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250C1BFC02470025BCF8 /* List.swift */; };
+		D6EEC4F31C6C4B120071A1B4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250D1BFC02470025BCF8 /* Operators.swift */; };
+		D6EEC5101C6C4BE30071A1B4 /* ListK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EEC5061C6C4BE30071A1B4 /* ListK.framework */; };
+		D6EEC51D1C6C4CB00071A1B4 /* ListK.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E824F51BFC01A60025BCF8 /* ListK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6EEC51E1C6C4CB00071A1B4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250C1BFC02470025BCF8 /* List.swift */; };
+		D6EEC51F1C6C4CB00071A1B4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250D1BFC02470025BCF8 /* Operators.swift */; };
+		D6EEC5201C6C4CB10071A1B4 /* ListK.h in Headers */ = {isa = PBXBuildFile; fileRef = D6E824F51BFC01A60025BCF8 /* ListK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6EEC5211C6C4CB10071A1B4 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250C1BFC02470025BCF8 /* List.swift */; };
+		D6EEC5221C6C4CB10071A1B4 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E8250D1BFC02470025BCF8 /* Operators.swift */; };
+		D6EEC5231C6C4CB50071A1B4 /* ListKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E825011BFC01A60025BCF8 /* ListKTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,6 +34,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D6E824F11BFC01A60025BCF8;
 			remoteInfo = ListK;
+		};
+		D6EEC4E41C6C486F0071A1B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E824E91BFC01A60025BCF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6EEC4D81C6C486E0071A1B4;
+			remoteInfo = "ListK-OSX";
+		};
+		D6EEC5111C6C4BE30071A1B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6E824E91BFC01A60025BCF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6EEC5051C6C4BE30071A1B4;
+			remoteInfo = "LiskK-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -33,6 +60,11 @@
 		D6E825031BFC01A60025BCF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E8250C1BFC02470025BCF8 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		D6E8250D1BFC02470025BCF8 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		D6EEC4D91C6C486E0071A1B4 /* ListK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EEC4E21C6C486E0071A1B4 /* ListKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EEC4F91C6C4BCC0071A1B4 /* ListK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EEC5061C6C4BE30071A1B4 /* ListK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ListK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6EEC50F1C6C4BE30071A1B4 /* ListKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +80,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E824FD1BFC01A60025BCF8 /* ListK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4D51C6C486E0071A1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4DF1C6C486E0071A1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC4E31C6C486F0071A1B4 /* ListK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4F51C6C4BCC0071A1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC5021C6C4BE30071A1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC50C1C6C4BE30071A1B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC5101C6C4BE30071A1B4 /* ListK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +137,11 @@
 			children = (
 				D6E824F21BFC01A60025BCF8 /* ListK.framework */,
 				D6E824FC1BFC01A60025BCF8 /* ListKTests.xctest */,
+				D6EEC4D91C6C486E0071A1B4 /* ListK.framework */,
+				D6EEC4E21C6C486E0071A1B4 /* ListKTests.xctest */,
+				D6EEC4F91C6C4BCC0071A1B4 /* ListK.framework */,
+				D6EEC5061C6C4BE30071A1B4 /* ListK.framework */,
+				D6EEC50F1C6C4BE30071A1B4 /* ListKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,12 +177,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6EEC4D61C6C486E0071A1B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC4F01C6C49CB0071A1B4 /* ListK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4F61C6C4BCC0071A1B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC51D1C6C4CB00071A1B4 /* ListK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC5031C6C4BE30071A1B4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC5201C6C4CB10071A1B4 /* ListK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D6E824F11BFC01A60025BCF8 /* ListK */ = {
+		D6E824F11BFC01A60025BCF8 /* ListK-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6E825061BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK" */;
+			buildConfigurationList = D6E825061BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK-iOS" */;
 			buildPhases = (
 				D6E824ED1BFC01A60025BCF8 /* Sources */,
 				D6E824EE1BFC01A60025BCF8 /* Frameworks */,
@@ -119,14 +217,14 @@
 			);
 			dependencies = (
 			);
-			name = ListK;
+			name = "ListK-iOS";
 			productName = ListK;
 			productReference = D6E824F21BFC01A60025BCF8 /* ListK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D6E824FB1BFC01A60025BCF8 /* ListKTests */ = {
+		D6E824FB1BFC01A60025BCF8 /* ListK-iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6E825091BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListKTests" */;
+			buildConfigurationList = D6E825091BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK-iOS Tests" */;
 			buildPhases = (
 				D6E824F81BFC01A60025BCF8 /* Sources */,
 				D6E824F91BFC01A60025BCF8 /* Frameworks */,
@@ -137,9 +235,99 @@
 			dependencies = (
 				D6E824FF1BFC01A60025BCF8 /* PBXTargetDependency */,
 			);
-			name = ListKTests;
+			name = "ListK-iOS Tests";
 			productName = ListKTests;
 			productReference = D6E824FC1BFC01A60025BCF8 /* ListKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6EEC4D81C6C486E0071A1B4 /* ListK-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EEC4EE1C6C486F0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-OSX" */;
+			buildPhases = (
+				D6EEC4D41C6C486E0071A1B4 /* Sources */,
+				D6EEC4D51C6C486E0071A1B4 /* Frameworks */,
+				D6EEC4D61C6C486E0071A1B4 /* Headers */,
+				D6EEC4D71C6C486E0071A1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ListK-OSX";
+			productName = "ListK-OSX";
+			productReference = D6EEC4D91C6C486E0071A1B4 /* ListK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6EEC4E11C6C486E0071A1B4 /* ListK-OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EEC4EF1C6C486F0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-OSX Tests" */;
+			buildPhases = (
+				D6EEC4DE1C6C486E0071A1B4 /* Sources */,
+				D6EEC4DF1C6C486E0071A1B4 /* Frameworks */,
+				D6EEC4E01C6C486E0071A1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6EEC4E51C6C486F0071A1B4 /* PBXTargetDependency */,
+			);
+			name = "ListK-OSX Tests";
+			productName = "ListK-OSXTests";
+			productReference = D6EEC4E21C6C486E0071A1B4 /* ListKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D6EEC4F81C6C4BCC0071A1B4 /* ListK-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EEC4FE1C6C4BCC0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-watchOS" */;
+			buildPhases = (
+				D6EEC4F41C6C4BCC0071A1B4 /* Sources */,
+				D6EEC4F51C6C4BCC0071A1B4 /* Frameworks */,
+				D6EEC4F61C6C4BCC0071A1B4 /* Headers */,
+				D6EEC4F71C6C4BCC0071A1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ListK-watchOS";
+			productName = "ListK-watchOS";
+			productReference = D6EEC4F91C6C4BCC0071A1B4 /* ListK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6EEC5051C6C4BE30071A1B4 /* LiskK-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EEC5171C6C4BE30071A1B4 /* Build configuration list for PBXNativeTarget "LiskK-tvOS" */;
+			buildPhases = (
+				D6EEC5011C6C4BE30071A1B4 /* Sources */,
+				D6EEC5021C6C4BE30071A1B4 /* Frameworks */,
+				D6EEC5031C6C4BE30071A1B4 /* Headers */,
+				D6EEC5041C6C4BE30071A1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LiskK-tvOS";
+			productName = "LiskK-tvOS";
+			productReference = D6EEC5061C6C4BE30071A1B4 /* ListK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D6EEC50E1C6C4BE30071A1B4 /* LiskK-tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6EEC51A1C6C4BE30071A1B4 /* Build configuration list for PBXNativeTarget "LiskK-tvOS Tests" */;
+			buildPhases = (
+				D6EEC50B1C6C4BE30071A1B4 /* Sources */,
+				D6EEC50C1C6C4BE30071A1B4 /* Frameworks */,
+				D6EEC50D1C6C4BE30071A1B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6EEC5121C6C4BE30071A1B4 /* PBXTargetDependency */,
+			);
+			name = "LiskK-tvOS Tests";
+			productName = "LiskK-tvOSTests";
+			productReference = D6EEC50F1C6C4BE30071A1B4 /* ListKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +336,7 @@
 		D6E824E91BFC01A60025BCF8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = koherent.org;
 				TargetAttributes = {
@@ -157,6 +345,21 @@
 					};
 					D6E824FB1BFC01A60025BCF8 = {
 						CreatedOnToolsVersion = 7.1.1;
+					};
+					D6EEC4D81C6C486E0071A1B4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D6EEC4E11C6C486E0071A1B4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D6EEC4F81C6C4BCC0071A1B4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D6EEC5051C6C4BE30071A1B4 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D6EEC50E1C6C4BE30071A1B4 = {
+						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
@@ -172,8 +375,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6E824F11BFC01A60025BCF8 /* ListK */,
-				D6E824FB1BFC01A60025BCF8 /* ListKTests */,
+				D6E824F11BFC01A60025BCF8 /* ListK-iOS */,
+				D6EEC4D81C6C486E0071A1B4 /* ListK-OSX */,
+				D6EEC4F81C6C4BCC0071A1B4 /* ListK-watchOS */,
+				D6EEC5051C6C4BE30071A1B4 /* LiskK-tvOS */,
+				D6E824FB1BFC01A60025BCF8 /* ListK-iOS Tests */,
+				D6EEC4E11C6C486E0071A1B4 /* ListK-OSX Tests */,
+				D6EEC50E1C6C4BE30071A1B4 /* LiskK-tvOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +395,41 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D6E824FA1BFC01A60025BCF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4D71C6C486E0071A1B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4E01C6C486E0071A1B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4F71C6C4BCC0071A1B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC5041C6C4BE30071A1B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC50D1C6C4BE30071A1B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,13 +456,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6EEC4D41C6C486E0071A1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC4F21C6C4B0F0071A1B4 /* List.swift in Sources */,
+				D6EEC4F31C6C4B120071A1B4 /* Operators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4DE1C6C486E0071A1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC4F11C6C4AA20071A1B4 /* ListKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC4F41C6C4BCC0071A1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC51E1C6C4CB00071A1B4 /* List.swift in Sources */,
+				D6EEC51F1C6C4CB00071A1B4 /* Operators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC5011C6C4BE30071A1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC5211C6C4CB10071A1B4 /* List.swift in Sources */,
+				D6EEC5221C6C4CB10071A1B4 /* Operators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6EEC50B1C6C4BE30071A1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6EEC5231C6C4CB50071A1B4 /* ListKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		D6E824FF1BFC01A60025BCF8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D6E824F11BFC01A60025BCF8 /* ListK */;
+			target = D6E824F11BFC01A60025BCF8 /* ListK-iOS */;
 			targetProxy = D6E824FE1BFC01A60025BCF8 /* PBXContainerItemProxy */;
+		};
+		D6EEC4E51C6C486F0071A1B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6EEC4D81C6C486E0071A1B4 /* ListK-OSX */;
+			targetProxy = D6EEC4E41C6C486F0071A1B4 /* PBXContainerItemProxy */;
+		};
+		D6EEC5121C6C4BE30071A1B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6EEC5051C6C4BE30071A1B4 /* LiskK-tvOS */;
+			targetProxy = D6EEC5111C6C4BE30071A1B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -325,7 +621,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListK;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -343,7 +639,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListK;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListK;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -354,7 +650,7 @@
 				INFOPLIST_FILE = ListKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListKTests;
 			};
 			name = Debug;
 		};
@@ -364,7 +660,175 @@
 				INFOPLIST_FILE = ListKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ListKTests;
+			};
+			name = Release;
+		};
+		D6EEC4EA1C6C486F0071A1B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListK;
+				PRODUCT_NAME = ListK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D6EEC4EB1C6C486F0071A1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListK;
+				PRODUCT_NAME = ListK;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D6EEC4EC1C6C486F0071A1B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ListKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
+				PRODUCT_NAME = ListKTests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D6EEC4ED1C6C486F0071A1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ListKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
+				PRODUCT_NAME = ListKTests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D6EEC4FF1C6C4BCC0071A1B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.koherent.ListK-watchOS";
+				PRODUCT_NAME = ListK;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Debug;
+		};
+		D6EEC5001C6C4BCC0071A1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.koherent.ListK-watchOS";
+				PRODUCT_NAME = ListK;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.1;
+			};
+			name = Release;
+		};
+		D6EEC5181C6C4BE30071A1B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.koherent.LiskK-tvOS";
+				PRODUCT_NAME = ListK;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		D6EEC5191C6C4BE30071A1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ListK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.koherent.LiskK-tvOS";
+				PRODUCT_NAME = ListK;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		D6EEC51B1C6C4BE30071A1B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ListKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
+				PRODUCT_NAME = ListKTests;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		D6EEC51C1C6C4BE30071A1B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ListKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.koherent.ListKTests;
+				PRODUCT_NAME = ListKTests;
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
@@ -380,7 +844,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6E825061BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK" */ = {
+		D6E825061BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6E825071BFC01A60025BCF8 /* Debug */,
@@ -389,7 +853,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6E825091BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListKTests" */ = {
+		D6E825091BFC01A60025BCF8 /* Build configuration list for PBXNativeTarget "ListK-iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6E8250A1BFC01A60025BCF8 /* Debug */,
@@ -397,6 +861,46 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D6EEC4EE1C6C486F0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EEC4EA1C6C486F0071A1B4 /* Debug */,
+				D6EEC4EB1C6C486F0071A1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D6EEC4EF1C6C486F0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EEC4EC1C6C486F0071A1B4 /* Debug */,
+				D6EEC4ED1C6C486F0071A1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D6EEC4FE1C6C4BCC0071A1B4 /* Build configuration list for PBXNativeTarget "ListK-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EEC4FF1C6C4BCC0071A1B4 /* Debug */,
+				D6EEC5001C6C4BCC0071A1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D6EEC5171C6C4BE30071A1B4 /* Build configuration list for PBXNativeTarget "LiskK-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EEC5181C6C4BE30071A1B4 /* Debug */,
+				D6EEC5191C6C4BE30071A1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D6EEC51A1C6C4BE30071A1B4 /* Build configuration list for PBXNativeTarget "LiskK-tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6EEC51B1C6C4BE30071A1B4 /* Debug */,
+				D6EEC51C1C6C4BE30071A1B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
